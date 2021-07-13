@@ -7,7 +7,7 @@
   * Tambien cuenta con un registro de reclutadores los cuales son los que potearean los trabajos, y un **login**.
 
 ## Administrador para la gente que agrega empelados nuevos
-* Dashboard donde llenarán los datos sobre categorias deacuerdo con los empleados que los 
+* Dashboard donde llenarán los datos sobre categorias deacuerdo con los empleos que postearan los **reclutadores**
 
 ## Reclutadores
 * Registro para reclutadores.
