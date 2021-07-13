@@ -1,4 +1,4 @@
-# Bolsa-Trabajo
+# Bolsa de Trabajo
  Proyecto final de la materia de "Programación web"
  ### Mi aplicación web, esta relacionada a un a bolsa de trabajo. 
 
