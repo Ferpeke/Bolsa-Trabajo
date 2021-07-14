@@ -24,8 +24,8 @@
 * Esta en mi repositorio de **Github** en [Bolsa-Trabajo](https://github.com/Ferpeke/Bolsa-Trabajo/)
 * Una vez descargarlo deberas de contemplar dos cosas muy importantes 
 * Debes de tener instalado en tu equipo una herramienta de desarrollo que te permite probar tu desarrollo web basado en PHP en tu propio ordenador como que es el mas pupular [xampp](https://www.apachefriends.org/es/index.html) para sistemas operativos como windows, ubuntu o mac os. 
-* Y despues de instalarlo, deberas e crear la base de datos en un Gestor de base de datos, Xampp trae su Gestor de base de datos con esta ruta podras acceder a el [phpmyadmin](http://localhost/phpmyadmin/)
+* Y despues de instalarlo, deberas e crear la base de datos en un Gestor de base de datos, Xampp trae su Gestor de base de datos con esta ruta podras acceder a el [phpmyadmin](http://localhost/phpmyadmin/).
 * Una vez instalado, deberas de buscar en la carpeta donde este instalado la herramienta de desarrollo web, comunmente es la carpeta para xampp es **htdocs** y dentro de esta deberas de colocar el archivo comprimido.
-* Debes de descomprimirlo y colocaras en tu explorador favorito la ruta como ej. sería algo así "http://localhost/Bolsa-Trabajo/pagina-principal".
+* Debes de descomprimirlo y colocaras en tu explorador favorito la ruta como ej. sería algo así "http://localhost/Bolsa-Trabajo/pagina-principal" y deberas de buscar en las carperta una con el nombre de [**schema**](https://github.com/Ferpeke/Bolsa-Trabajo/tree/main/schema) el cual contendrá un archivo en el cual estará el query de la base de datos que la copiaremos y la pegaremos en **phpmyadmin** donde lo ejecutaremos y sería todo.
 
  
