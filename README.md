@@ -72,4 +72,7 @@ si deseas usarlo, puedes cambiar la esctructur la cual es la siguinte
 ```
 * se pondrá modificar los siguientes campos 
 * $conexion -> la variable se podrá camibiar el nombre pero comenzando con **$** 
-* y dento los campos de la **mysqli('localhost', 'nombre del administrador', 'contraseña de administrador', 'nombre de la base de datos', numero de puerto sin comillas simple '')**
+```
+Y dento los campos de la **mysqli('localhost', 'nombre del administrador', 'contraseña de administrador', 'nombre de la base de datos', numero de puerto sin comillas simple '')**
+
+```
