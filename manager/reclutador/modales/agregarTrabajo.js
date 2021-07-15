@@ -68,12 +68,42 @@ $(document).ready(() =>{
           html: 'NO puedes trabajar menos de una hora!!'
         })
       } else {
-        console.log($('#frmAgregarTrabajo').serialize());
-        Swal.fire({
-          icon: 'success',
-          title: 'Genial..!',
-          html: 'Se a publicado tu trabajo!!'
-        })
+
+        $.ajax({
+          type: 'POST',
+          url: 'control/agregarTrabajo.php',
+          data: $('#frmAgregarTrabajo').serialize(),
+          success: resp =>{
+            if(resp == 2){
+              Swal.fire({
+                icon: 'error',
+                title: 'Ups..!',
+                html: 'NO se a encontrado el <strong class = "text-danger">"Municipio o Alcaldia"</strong>'
+              })
+            }else if(resp == 1){
+              Swal.fire({
+                icon: 'success',
+                title: 'Genial..!',
+                html: 'Se a publicado tu trabajo!!',
+                showConfirmButton: false
+              })
+              setTimeout(() => {
+                $('#tablaTrabajosaDataTable').load('reclutador')
+                window.location = 'reclutador';
+              }, 1000);
+            } else {
+              Swal.fire({
+                icon: 'error',
+                title: 'Ups..!',
+                html: 'No se a publicado<strong class = "text-danger">"el Trabajo"</strong>'
+              })
+            }
+          }
+        });
+
+
+
+       
         
 
       }

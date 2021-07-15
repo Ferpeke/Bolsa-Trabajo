@@ -1,3 +1,15 @@
+<?php
+  require_once './app/conexion.php';
+  $conexion = conexion();
+  $usuario = $_SESSION['reclutador'];
+  $sql = "SELECT id_reclutador FROM t_reclutador WHERE correo='$usuario';";
+  $dato = $conexion->query($sql);
+  while($mostrar = mysqli_fetch_assoc($dato)){
+    $id_reclutador = $mostrar['id_reclutador'];
+  }
+?>
+
+
 <!-- Modal Categoria -->
 <div class="modal fade" id="modalAgregarTrabajo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -10,8 +22,9 @@
       </div>
       <div class="modal-body">
         <form id="frmAgregarTrabajo">
-          <label for="nombre_Trabajo">Nombre del Trabajo:</label>
-          <input type="text" id="nombre_Trabajo" name="nombre_Trabajo" class="form-control" placeholder="Escriba el nombre del trabajo">
+          <input type="text" value="<?php echo $id_reclutador?>" name="id_reclutador" hidden>
+          <label for="nombre_trabajo">Nombre del Trabajo:</label>
+          <input type="text" id="nombre_trabajo" name="nombre_trabajo" class="form-control" placeholder="Escriba el nombre del trabajo">
 
           <div class="mt-2">
             <label for="salario_trabajo">Salario:</label>
@@ -47,23 +60,12 @@
           <label for="dias_trabajo">Ingresa los dias de la semana a trabajar:</label>
           <input type="text" class="form-control" id="dias_trabajo" name="dias_trabajo" placeholder="Ej. Lunes, Martes, Miercoles...etc,">
           <div class="mt-2">
-            <label for="nombre_Categoria">Categoria del Trabajo:</label>
-            <div class="input-group mb-3">
-              <select class="custom-select" id="nombre_Categoria">
-                <option value="0">Selecciona la categoria</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-          </div>
-          <div class="mt-2">
             <label for="requisitos">Requisistos del trabajo:</label>
             <textarea name="requisitos" id="requisitos" cols="15" rows="5" class="form-control"></textarea>
           </div>
           <div class="mt-2">
             <label for="tiempo_contrato">Tiempo de contratación:</label>
-            <select class="custom-select" id="tiempo_contrato">
+            <select class="custom-select" id="tiempo_contrato" name="tiempo_contratacion">
               <option value="0">Selecciona </option>
               <option value="Temporal">Temporal</option>
               <option value="Definitivo">Definitivo</option>

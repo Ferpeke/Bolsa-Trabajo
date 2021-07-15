@@ -42,7 +42,7 @@
           </div>
           <div>
             <label for="contrasenia">Contraseña:</label>
-            <input type="password" class="form-control rounded-pill" id="contrasenia" name="contrasenia" autocomplete="off" placeholder="Ingresa tu Email">
+            <input type="password" class="form-control rounded-pill" id="contrasenia" name="contrasenia" autocomplete="off" placeholder="Ingresa tu Contraseña">
           </div>
         </form>
         <div class="mt-3 text-center">

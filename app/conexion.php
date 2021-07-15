@@ -5,9 +5,10 @@
 
     if($conexion->errno){
       echo 'Error en la conexion'. ' '. $conexion->errno;
-    } else {
-      return $conexion;
-    }
+    } 
+    $conexion->set_charset('utf8');
+    return $conexion;
+    
   }
   
   

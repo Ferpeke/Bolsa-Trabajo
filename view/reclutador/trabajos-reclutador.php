@@ -10,6 +10,7 @@
     $paterno = $mostrar['paterno'];
     $materno = $mostrar['materno'];
   }
+  $conexion->close();
   if(isset($_SESSION['reclutador'])){
 
   

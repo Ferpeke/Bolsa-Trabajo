@@ -21,12 +21,12 @@ $(document).ready(() =>{
         success: respuesta =>{
           respuesta = respuesta.trim();
           if(respuesta == 1){
-            $('#formAgregarCategoria')[0].reset();
             Swal.fire({
               icon: 'success',
               title: 'Categoria Guardada..!',
               showConfirmButton: false,
             })
+            $('#formAgregarCategoria').load('admin');
           } else{
             console.log(respuesta)
           }

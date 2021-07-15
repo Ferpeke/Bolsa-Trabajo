@@ -1,5 +1,6 @@
 <?php
-require_once 'view/pagina-elementos/navbar.php';
+
+  require_once 'view/pagina-elementos/navbar.php';
 ?>
 <div class="container-fluid mt-2">
   <div class="row justify-content-center">
