@@ -47,6 +47,9 @@ require_once 'app/config.php'
             case 'cerrar-sesion':
               require_once './control/cerrar-sesion.php';
               break;
+            case 'sin-trabajos':
+              require_once 'view/error/sin_trabajos.php';
+              break;
             default:
               require_once 'view/error/error_404.php';
               break;
