@@ -23,6 +23,9 @@ require_once 'app/config.php'
             case 'registro':
               require_once 'view/registro.php';
               break;
+            case 'registro-admin':
+              require_once 'view/registro_admin.php';
+              break;
             case 'login':
               require_once 'view/login.php';
               break;
@@ -40,6 +43,9 @@ require_once 'app/config.php'
               break;
             case 'descripcion-trabajo':
               require_once 'view/descripcion-trabajos/descripcion-trabajo.php';
+              break;
+            case 'cerrar-sesion':
+              require_once './control/cerrar-sesion.php';
               break;
             default:
               require_once 'view/error/error_404.php';

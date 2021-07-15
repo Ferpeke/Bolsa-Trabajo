@@ -16,3 +16,4 @@
 <script src="<?=SERVIDOR?>lib/sw2/js/sweetalert2.all.min.js"></script>
 <script src="<?=SERVIDOR?>lib/datatable-1.10.25/js/Spanish.json"></script>
 <script src="<?=SERVIDOR?>manager/login.js"></script>
+<script src="<?=SERVIDOR?>lib/sha1-0.6.0/sha1.min.js"></script>

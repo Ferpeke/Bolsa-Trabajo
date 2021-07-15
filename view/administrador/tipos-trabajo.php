@@ -1,3 +1,22 @@
+<?php
+  session_start();
+
+  require_once './app/conexion.php';
+  $conexion = conexion();
+  $usuario = $_SESSION['admin']; 
+  $sql = "SELECT nombre, paterno, materno FROM t_admin WHERE correo = '$usuario'";
+  $datos = $conexion->query($sql);
+  while($mostrar = mysqli_fetch_assoc($datos)){
+    $nombre = $mostrar['nombre'];
+    $paterno = $mostrar['paterno'];
+    $materno = $mostrar['materno'];
+  }
+  if(isset($_SESSION['admin'])){
+
+  
+?>
+
+
 <!-- cambiamos el color de la barra para distiinguir el tipo de usuarios que hay -->
 <!-- recordemos que solo hay dos tipos el reclutador y administrador -->
 <style>
@@ -28,10 +47,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <span class="navbar-brand"><i class="fas fa-user mr-2"></i>@Nombre de usuario</span>
+                <span class="navbar-brand"><i class="fas fa-user mr-2"></i><?php echo $nombre . ' '. $paterno . ' '. $materno ?></span>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="pagina-principal"><i class="fas fa-sign-out-alt mr-2"></i>Salir</a>
+                <a class="nav-link" href="cerrar-sesion"><i class="fas fa-sign-out-alt mr-2"></i>Salir</a>
               </li>
             </ul>
           </div>
@@ -74,4 +93,11 @@
 <!-- agregar modal de catgorias -->
 <?php
   require_once 'modales/categoriaAgregar.php';
+?>
+<?php
+  }else {
+    header('location:pagina-principal');
+  }
+  
+  
 ?>

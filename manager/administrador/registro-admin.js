@@ -19,12 +19,6 @@ $(document). ready( () =>{
         title: 'Oops...',
         html: 'Te falta llenar el campo <strong>"Apellido Materno"</strong>'
       })
-    } else if ($('#numero_telefonico').val() == '') {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        html: 'Te falta llenar el campo <strong>"Numero Telefonico"</strong>'
-      })
     } else if ($('#email').val() == '') {
       Swal.fire({
         icon: 'error',
@@ -45,11 +39,10 @@ $(document). ready( () =>{
       });
     }else {
       if($('#contrasenia').val() == $('#confirmar_contrasenia').val()){
-        // console.log($('#formRegistro').serialize());
         $.ajax({
           type : 'POST',
-          url : 'control/registro.php',
-          data : $('#formRegistro').serialize(),
+          url : './control/registro-admin.php',
+          data : $('#formRegistroAdmin').serialize(),
           success: respuesta =>{
             
             if(respuesta == 1){
@@ -82,7 +75,8 @@ $(document). ready( () =>{
       }
     }
   }
-  $('#btn-registrar').click( () =>{
+  $('#btn_usuario').click( () =>{
+    console.log('hola');
     validar_campos_vacios();
   });
 });

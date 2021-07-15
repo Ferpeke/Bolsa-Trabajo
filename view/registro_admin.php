@@ -1,4 +1,4 @@
-  <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
       <div class="col-lg-12 barra_navegacion">
         <nav class="navbar navbar-expand-lg navbar-light text-white navbar-laravel">
@@ -27,11 +27,11 @@
   <div class="container mt-3">
     <div class="row justify-content-center">
       <div class="col-lg-12">
-        <div class="card color-contenedor-card">
+        <div class="card" style="background-color: #a0d2f3;">
           <div class="card-body">
-            <h1 class="text-center card-title"> Registro de Reclutador</h1>
+            <h1 class="text-center card-title"> Registro para Administrador</h1>
             <hr>
-            <form id = 'formRegistro'>
+            <form id = 'formRegistroAdmin'>
               <div class="container">
                 <div class="row justify-content-around py-4">
                   <div class="col-sm-6 mt-1">
@@ -43,9 +43,6 @@
 
                     <label for="materno">Apellido Materno:</label>
                     <input type="text" name="materno" id="materno" class="form-control rounded-pill" autocomplete="off" placeholder="Ingresa tú Apellido aterno">
-                    
-                    <label for="numero_telefonico">Numero Telefonico:</label>
-                    <input type="text" name="numero_telefonico" id="numero_telefonico" class="form-control rounded-pill w-50" autocomplete="off" placeholder="5555555555">
                   </div>
                   <div class="col-sm-6 mt-1">
                     <label for="email">Correo:</label>
@@ -59,12 +56,12 @@
                 </div>
                 <div class="row justify-content-center">
                   <div class="col-sm-8 mt-2">
-                    <span class="btn btn-sm rounded-pill text-white" style="width: 100%; background-color: #4183D7;" id="btn-registrar">Registrar</span>
+                    <span class="btn btn-sm rounded-pill text-white" style="width: 100%; background-color: #4183D7;" id="btn_usuario">Registrar</span>
                   </div>
                 </div>
                 <div class="row justify-content-center">
                   <div class="col-sm-8 mt-2 text-right">
-                    <a class="text-dark text-center" href="registro-admin" id="btn-registrar">Registrarse como Administrador  </a>
+                    <a   class="text-dark text-center" href="registro">Registrarse como reclutador</a>
                   </div>
                 </div>
               </div>
@@ -79,4 +76,4 @@
   <?php
   require_once 'pagina-elementos/footer.php'
   ?>
-  <script src="<?= SERVIDOR ?>manager/registro.js"></script>
+  <script src="<?=SERVIDOR?>manager/administrador/registro-admin.js"></script>

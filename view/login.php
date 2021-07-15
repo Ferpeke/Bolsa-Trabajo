@@ -35,7 +35,7 @@
           <h1>Iniciar Sesion</h1>
         </div>
         <hr>
-        <form>
+        <form id="formLogin">
           <div>
             <label for="email">Email:</label>
             <input type="email" class="form-control rounded-pill" id="email" name="email" autocomplete="off" placeholder="Ingresa tu Correo">
